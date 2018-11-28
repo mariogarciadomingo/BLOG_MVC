@@ -1,6 +1,6 @@
 
 <h2>Actualitzar Temàtica<h2>
-<form action="?controller=tematica&action=doUpdate" method="post">
+<form action="?controller=tematica&action=doUpdate" method="post" >
     <table class='table table-hover table-responsive table-bordered'>
     <tr>
             <td>Id</td>
@@ -20,6 +20,7 @@
             <td><input type='text' name='interes' class='form-control' value = '<?php echo $tematica->interes; ?>'></td>
             </tr>
         </tr>
+        
         <tr>
             <td></td>
             <td>

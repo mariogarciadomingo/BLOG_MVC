@@ -1,4 +1,4 @@
-
+<H1><?php echo $tematica->nom; ?></H1>
 <table class='table table-hover table-responsive table-bordered'>
         <tr>
             <td>Id</td>
@@ -21,4 +21,12 @@
             <td><?php echo $tematica->interes; ?></td>
         </tr>
         
+        <tr>
+            <td>Modificar</td>
+            <td>
+            <a href='?controller=tematica&action=update&id=<?php echo $tematica->id; ?>' class='btn btn-info left-margin'>Modificar</a>
+            <a href='?controller=tematica&action=doDelete&id=<?php echo $tematica->id; ?>' class='btn btn-danger delete-product'>Eliminar</a>
+        </td>
+        </tr>
+
  </table>

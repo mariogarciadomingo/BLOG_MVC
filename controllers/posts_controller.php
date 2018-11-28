@@ -28,8 +28,7 @@ class PostsController
     public function doCreate()
     {
       
-        Post::create($_POST['autor'], $_POST['contingut'], $_POST['titol'], $_POST['imatge'],$_POST['tematica']);
-        Post::uploadPhoto();
+        Post::create($_POST['autor'], $_POST['contingut'], $_POST['titol'],$_POST['tematica']);
         require_once 'views/posts/create.php';
     }
     public function update()
@@ -44,7 +43,7 @@ class PostsController
     }
     public function doUpdate()
     {
-        Post::update($_POST['id'], $_POST['autor'], $_POST['contingut'], $_POST['titol'], $_POST['imatge'],$_POST['tematica']);
+        Post::update($_POST['id'], $_POST['autor'], $_POST['contingut'],Post::find($_POST['id'])->image, $_POST['titol'],$_POST['tematica']);
         $posts = Post::all();
         return call('posts', 'index');
     }

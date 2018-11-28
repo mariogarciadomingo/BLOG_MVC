@@ -1,6 +1,6 @@
 
 <h2>Actualitzar Post<h2>
-<form action="?controller=posts&action=doUpdate" method="post">
+<form action="?controller=posts&action=doUpdate" method="post" enctype='multipart/form-data'>
     <table class='table table-hover table-responsive table-bordered'>
     <tr>
             <td>Id</td>
@@ -19,17 +19,13 @@
             <td>Contingut</td>
             <td><input type='text' name='contingut' class='form-control' value = '<?php echo $post->content; ?>'></td>
         </tr>
-        <tr>
-            <td>Imatge</td>
-            <td><input type="file" name="imatge" /></td>
-            </tr>
-        </tr>
+        
         <tr>
             <td>Temàtica</td>
             <td>
                 <select class='form-control' name='tematica'>
                 <?php 
-                echo    "<option value='".$tematica->id."'>".Tematica::find($post->tematica)->nom."</option>"
+                echo    "<option value='".$post->tematica."' selected>".Tematica::find($post->tematica)->nom."</option>"
                 ?>
             
                 <?php foreach ($tematicas as $tem) {
@@ -39,6 +35,15 @@
                 ?>
                 </select>
             </td>
+        </tr>
+        <tr>
+        <tr>
+            <td>Imatge</td>
+            <td>
+            <img src="data:image/png;base64,<?php echo base64_encode($post->image); ?>" alt="Imagen" />
+                <input type="file" name="imatge"/></td>
+            </tr>
+        </tr>
         </tr>
         <tr>
             <td></td>

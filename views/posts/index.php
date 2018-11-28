@@ -1,4 +1,4 @@
-<p><strong>Listado de los posts:</strong></p>
+<h1><strong>Listado de los posts:</strong></h1>
 <table class='table table-hover table-responsive table-bordered'>
   <tr>
     <th>Titol</th>

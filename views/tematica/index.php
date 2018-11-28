@@ -1,4 +1,4 @@
-<p><strong>Listado de las temàticas:</strong></p>
+<H1><strong>Listado de las temàticas:</strong></H1>
 <table class='table table-hover table-responsive table-bordered'>
   <tr>
     <th>Nom</th>
